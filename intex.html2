@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<meta http-equiv="refresh" content="0; url=/photosync/upload.html?v=6">
+<link rel="canonical" href="/photosync/upload.html?v=6">
+<p>If you are not redirected, <a href="/photosync/upload.html?v=6">click here</a>.</p>
+<script>
+  // JS redirect fallback (fast + works if meta refresh is blocked)
+  location.replace("/photosync/upload.html?v=6");
+</script>

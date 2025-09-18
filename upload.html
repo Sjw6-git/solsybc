@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SolSync — Upload & Sync (Demo)</title>
+  <link rel="stylesheet" href="style.css?v=9" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span>SolSync</span></a>
+    <nav class="nav">
+      <a class="active" href="upload.html">Demo</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- ONE section with everything -->
+    <section class="panel" id="xfer">
+      <h1>Send a file in one step</h1>
+
+      <!-- picker + button -->
+      <p class="row">
+        <input type="file" id="file" />
+        <button id="go" class="btn primary">Upload & get link</button>
+      </p>
+
+      <!-- QR + actions + raw link (hidden until we have a link) -->
+      <div id="result" hidden>
+        <h3>Open on your other device</h3>
+        <canvas id="qr" class="qr-canvas" aria-hidden="true"></canvas>
+
+      <p class="row" style="margin-top:8px">
+      <a id="open" class="btn primary" target="_blank" rel="noopener">Open link</a>
+      <button id="copy" class="btn">Copy link</button>
+      <button id="show-qr" class="btn outline">Full-screen QR</button>
+      </p>
+<!-- For full-screen QR (optional) -->
+      <div id="qr-modal" class="modal" hidden>
+      <div class="card">
+      <canvas id="qr-big" class="qr-canvas" aria-hidden="true"></canvas>
+      <img id="qrimg" class="qr-canvas" alt="QR code" style="display:none" />
+      <p class="row"><button id="close-qr" class="btn">Close</button></p>
+  </div>
+</div>
+
+
+      <!-- status log (still inside the same section) -->
+      <h3>Status</h3>
+      <pre id="log" class="log"></pre>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div>© <span id="year"></span> SolSync</div></footer>
+
+  <!-- Real QR lib, then your script -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  <script src="script.js?v=13"></script>
+</body>
+</html>
